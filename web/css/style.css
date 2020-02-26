@@ -1,0 +1,229 @@
+@media screen and (min-width: 1100px){
+    html{
+        font-family: "Roboto Light", Verdana, sans-serif;
+        background-color: #F0F8FF;
+    }
+
+    img[src="img/Logores.png"] {
+        width: 60%;
+        min-width: 200px;
+        max-width: 200px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    header {
+        display: grid;
+        grid-area: banner;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        background: #F0F8FF no-repeat center;
+        background-size: cover;
+        margin-bottom: 20px;
+        align-items: center;
+
+    }
+
+    nav {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: -2;
+        grid-column-end: -1;
+    }
+
+    nav ul {
+        display: flex;
+        flex-flow: row;
+        justify-content: right;
+
+    }
+
+    nav li {
+        background-color: #9C0000;
+        border-radius: 25px;
+    }
+
+    nav li a {
+        display: block;
+        color: #FFFFFF;
+        background-color: #9C0000;
+        text-decoration: none;
+        border-radius: 25px;
+        text-align: center;
+        padding: 20px 20px 20px 20px;
+        height: 100%;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+        background-color: #FFFFFF;
+        color: #9C0000;
+    }
+
+    nav a {
+        color: #F8F8FF;
+        text-decoration: none;
+        text-align: center;
+    }
+    main {
+        grid-area: main;
+        padding-bottom: 20px;
+
+        /*margin: auto */
+    }
+
+    table, td, th {
+        border: 1px solid #000;
+        border-collapse: collapse; /* all borders are melted together: you don't see difference between several borders */
+    }
+
+    table {
+        table-layout: fixed;
+        box-sizing: border-box;
+        margin: auto 10px auto 10px;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    td, th {
+        padding: 1em;
+    }
+
+    h1, nav {
+        padding: 10px;
+        margin-top: 10px;
+
+    }
+
+    #inspringen {
+        width: 80em;
+    }
+
+    #form {
+        margin-left: 100px;
+    }
+
+    #form ul {
+        font-family: "Candara", Verdana, sans-serif;
+        padding: 10px;
+        line-height: 2em;
+    }
+
+    #form li {
+        display: block;
+    }
+
+    .knop {
+        display: inline-block;
+        width: 30%;
+    }
+
+    input {
+        display: inline-block;
+        margin: 10px;
+        width: 30%;
+        border-radius: 25px;
+        padding-left: 10px;
+
+    }
+
+    #radio{
+        width: 0%;
+        float: left;
+    }
+
+    textarea {
+        display: block;
+        margin: 10px;
+        width: 30%;
+        border-radius: 25px;
+        padding-left: 20px;
+    }
+
+    label {
+        display: flex;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 180%;
+        grid-row-start: 1;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        color: #000000;
+    }
+
+    h2 {
+        clear: left;
+        color: #191970;
+        font-size: 110%;
+        margin: 10px 10px 5px 10px;
+    }
+
+
+    h3 {
+        font-size: medium;
+        font-family: "Helvetica", serif;
+        clear: left;
+        margin: 20px 20px 5px 20px;
+    }
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    article{
+        margin: auto 10px auto 10px;
+    }
+
+    p {
+        font-family: "Candara", Verdana, sans-serif;
+        margin: auto;
+        padding: 10px;
+        line-height: 2em;
+        clear: both;
+    }
+
+
+
+    #knoppen li {
+        width: 30%;
+        margin-right: 0;
+    }
+
+    #knoppen {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+
+    }
+
+    #reset input {
+        background-color: #9C0000;
+        color: #FFFFFF;
+
+    }
+
+    footer {
+        grid-area: footer;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: -4;
+        grid-column-end: -1;
+    }
+
+    footer address {
+
+        font-size: 12px;
+    }
+
+    footer ul {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+    }
+
+}
