@@ -36,21 +36,24 @@
 </main>
 
 <footer>
-    <h3>Sporthal Diependal</h3>
-    <address>
-
-        <ul>
-            <li>Lindeboomstraat 30, 3080 Tervuren</li>
-            <li>02/767.75.25</li>
-        </ul>
-    </address>
-    <h3>Sporthal GITO-Tervuren</h3>
-    <address>
-        <ul>
-            <li>Pater Dupierreuxlaan 1B, 3080 Tervuren</li>
-            <li>02/766.53.62</li>
-        </ul>
-    </address>
+    <div id="links">
+        <h3>Sporthal Diependal</h3>
+        <address>
+            <ul>
+                <li>Lindeboomstraat 30, 3080 Tervuren</li>
+                <li>02/767.75.25</li>
+            </ul>
+        </address>
+    </div>
+    <div id="rechts">
+        <h3>Sporthal GITO-Tervuren</h3>
+        <address>
+            <ul>
+                <li>Pater Dupierreuxlaan 1B, 3080 Tervuren</li>
+                <li>02/766.53.62</li>
+            </ul>
+        </address>
+    </div>
 </footer>
 
 </body>

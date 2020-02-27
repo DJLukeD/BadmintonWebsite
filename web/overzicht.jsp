@@ -28,7 +28,7 @@
     </nav>
 </header>
 <main>
-<h2> Uw bestelde rackets zijn</h2>
+    <h2> Uw bestelde rackets zijn</h2>
     <table>
         <thead>
         <tr>
@@ -66,21 +66,25 @@
     </table>
 </main>
 <footer>
-    <h3>Sporthal Diependal</h3>
-    <address>
+    <article>
+        <h3>Sporthal Diependal</h3>
+        <address>
 
-        <ul>
-            <li>Lindeboomstraat 30, 3080 Tervuren</li>
-            <li>02/767.75.25</li>
-        </ul>
-    </address>
-    <h3>Sporthal GITO-Tervuren</h3>
-    <address>
-        <ul>
-            <li>Pater Dupierreuxlaan 1B, 3080 Tervuren</li>
-            <li>02/766.53.62</li>
-        </ul>
-    </address>
+            <ul>
+                <li>Lindeboomstraat 30, 3080 Tervuren</li>
+                <li>02/767.75.25</li>
+            </ul>
+        </address>
+    </article>
+    <article>
+        <h3>Sporthal GITO-Tervuren</h3>
+        <address>
+            <ul>
+                <li>Pater Dupierreuxlaan 1B, 3080 Tervuren</li>
+                <li>02/766.53.62</li>
+            </ul>
+        </address>
+    </article>
 </footer>
 </body>
 </html>

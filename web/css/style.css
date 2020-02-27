@@ -210,6 +210,18 @@
 
     }
 
+    #links{
+        float: left;
+        width: 50%;
+        padding: 10px
+    }
+
+    #rechts{
+
+        clear: right;
+        padding: 10px;
+    }
+
     footer {
         grid-area: footer;
         grid-row-start: 3;
