@@ -1,10 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lukas
-  Date: 24/02/2020
-  Time: 16:20
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="domain.model.Racket" %>
+
+<%@ page import="java.util.ArrayList" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="nl">
@@ -23,7 +20,7 @@
         <ul>
             <li><a href="index.jsp">Home</a></li>
             <li><a href="bestel.jsp">Bestel</a></li>
-            <li><a href="overzicht.jsp">Overzicht</a></li>
+            <li><a href="Servlet">Overzicht</a></li>
         </ul>
     </nav>
 </header>
@@ -39,31 +36,34 @@
         </tr>
         </thead>
         <tbody>
+        <%
+            ArrayList<Racket> rackets = (ArrayList<Racket>) request.getAttribute("lijst");
 
-        <tr>
-            <td>Astrox</td>
-            <td>6</td>
-            <td>1020</td>
-            <td>8.3</td>
-        </tr>
+            for (Racket r : rackets) {
+                if (r != null) {
 
+        %>
         <tr>
-            <td>Voltric</td>
-            <td>3</td>
-            <td>420</td>
-            <td>10.5</td>
+            <td><%=r.getNaam()%>
+            </td>
+            <td><%=r.getAantal()%>
+            </td>
+            <td><%=r.getTotaalPrijs()%>
+            </td>
+            <td><%=r.getAantalKiloBespanning()%>
+            </td>
         </tr>
-
-        <tr>
-            <td>Nanoflare</td>
-            <td>3</td>
-            <td>480</td>
-            <td>9</td>
-        </tr>
+        <%
+                }
+            }
+        %>
 
 
         </tbody>
+
     </table>
+    <p>Het merk van rackets die het minst in stock zijn, is <strong><%=request.getAttribute("minst")%> </strong>.
+    </p>
 </main>
 <footer>
     <article>

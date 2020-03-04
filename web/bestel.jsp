@@ -23,41 +23,42 @@
         <ul>
             <li><a href="index.jsp">Home</a></li>
             <li><a href="bestel.jsp">Bestel</a></li>
-            <li><a href="overzicht.jsp">Overzicht</a></li>
+            <li><a href="Servlet">Overzicht</a></li>
         </ul>
     </nav>
 </header>
 <main>
     <div id="inspringen">
         <div action="#">
-            <h2>Bestel hier je rackets.</h2>
-            <p>
-                <label for="merk">Merk*</label>
-                <input id="merk" type="text" name="merk" required>
-            </p>
-            <p>
-                <label for="aantal">Aantal (tussen 1-10)*:</label>
-                <input type="number" id="aantal" name="aantal" min="1" max="10" required>
-            </p>
+            <form>
+                <h2>Bestel hier je rackets.</h2>
+                <p>
+                    <label for="merk">Merk*</label>
+                    <input id="merk" type="text" name="merk" required>
+                </p>
+                <p>
+                    <label for="aantal">Aantal (tussen 1-10)*:</label>
+                    <input type="number" id="aantal" name="aantal" min="1" max="10" required>
+                </p>
 
-            <p>
-                <label for="prijs">Prijs*</label>
-                <input id="prijs" type="number" min="0" name="prijs" required>
-            </p>
+                <p>
+                    <label for="prijs">Prijs*</label>
+                    <input id="prijs" type="number" min="0" name="prijs" required>
+                </p>
 
-            <p>
-                <label for="bespanning">Bespanning</label>
-                <input id="bespanning" type="number" step="any" min="0" name="bespanning">
-            </p>
+                <p>
+                    <label for="bespanning">Bespanning</label>
+                    <input id="bespanning" type="number" step="any" min="0" name="bespanning">
+                </p>
 
-            <ul id="knoppen">
-                <li id="reset">
-                    <input type="reset" value="Reset">
-                </li>
-                <li>
-                    <input type="submit" value="Verzend">
-                </li>
-            </ul>
+                <ul id="knoppen">
+                    <li id="reset">
+                        <input type="reset" value="Reset">
+                    </li>
+                    <li>
+                        <input type="submit" value="Verzend">
+                    </li>
+                </ul>
             </form>
         </div>
     </div>
