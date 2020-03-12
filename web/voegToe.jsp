@@ -22,28 +22,28 @@
     <nav>
         <ul>
             <li><a href="index.jsp">Home</a></li>
-            <li><a href="bestel.jsp">Bestel</a></li>
+            <li><a href="voegToe.jsp">Bestel</a></li>
             <li><a href="Servlet">Overzicht</a></li>
         </ul>
     </nav>
 </header>
 <main>
     <div id="inspringen">
-        <div action="#">
-            <form>
+        <div>
+            <form method="POST" action="Servlet" novalidate>
                 <h2>Bestel hier je rackets.</h2>
                 <p>
                     <label for="merk">Merk*</label>
-                    <input id="merk" type="text" name="merk" required>
+                    <input id="merk" type="text" name="merk">
                 </p>
                 <p>
                     <label for="aantal">Aantal (tussen 1-10)*:</label>
-                    <input type="number" id="aantal" name="aantal" min="1" max="10" required>
+                    <input type="number" id="aantal" name="aantal" min="1" max="10">
                 </p>
 
                 <p>
                     <label for="prijs">Prijs*</label>
-                    <input id="prijs" type="number" min="0" name="prijs" required>
+                    <input id="prijs" type="number" min="0" name="prijs">
                 </p>
 
                 <p>

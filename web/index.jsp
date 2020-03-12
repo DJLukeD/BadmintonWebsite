@@ -17,7 +17,7 @@
     <nav>
         <ul>
             <li><a href="index.jsp">Home</a></li>
-            <li><a href="bestel.jsp">Bestel</a></li>
+            <li><a href="voegToe.jsp">Bestel</a></li>
             <li><a href="Servlet">Overzicht</a></li>
         </ul>
     </nav>
@@ -30,7 +30,7 @@
             bestellen. Neem zeker eens een kijkje.
         </p>
         <p>
-            Via deze link kan u uw rackets bestellen. <a href="bestel.jsp">Klik hier.</a>
+            Via deze link kan u uw rackets bestellen. <a href="voegToe.jsp">Klik hier.</a>
         </p>
     </article>
 </main>

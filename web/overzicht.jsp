@@ -19,7 +19,7 @@
     <nav>
         <ul>
             <li><a href="index.jsp">Home</a></li>
-            <li><a href="bestel.jsp">Bestel</a></li>
+            <li><a href="voegToe.jsp">Bestel</a></li>
             <li><a href="Servlet">Overzicht</a></li>
         </ul>
     </nav>

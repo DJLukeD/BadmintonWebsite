@@ -1,6 +1,7 @@
 package ui.controller;
 
 import domain.db.RacketDB;
+import domain.model.Racket;
 
 import javax.servlet.ServletException;
 import javax.servlet.RequestDispatcher;
@@ -15,15 +16,42 @@ public class Servlet extends HttpServlet {
 
     private RacketDB racketLijst = new RacketDB();
 
+    public Servlet() {
+        super();
+    }
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
+        String destination = "voegToe.jsp";
+
+        String merk = request.getParameter("merk");
+        String aantalFromParameter = request.getParameter("aantal");
+        int aantal = Integer.parseInt(aantalFromParameter);
+        String bespanningFromParameter = request.getParameter("bespanning");
+        double bespanning = Double.parseDouble(bespanningFromParameter);
+        String prijsFromParameter = request.getParameter("prijs");
+        double prijs = Double.parseDouble(prijsFromParameter);
+
+        if (merk != null && aantal <= 0 && bespanning <= 0 && prijs <= 0.0) {
+            Racket racket = new Racket(merk, aantal, bespanning, prijs);
+            racketLijst.voegToe(racket);
+            request.setAttribute("racket", racket);
+            request.setAttribute("minst", racketLijst.getMinstAantal());
+            request.setAttribute("lijst", racketLijst.getList());
+            destination = "overzicht.jsp";
+        }
+
+        RequestDispatcher view = request.getRequestDispatcher(destination);
+        view.forward(request, response);
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
+        String destination = "overzicht.jsp";
+
         request.setAttribute("minst", racketLijst.getMinstAantal());
         request.setAttribute("lijst", racketLijst.getList());
 
-        RequestDispatcher view = request.getRequestDispatcher("overzicht.jsp");
+        RequestDispatcher view = request.getRequestDispatcher(destination);
         view.forward(request, response);
     }
 

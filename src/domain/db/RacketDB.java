@@ -32,14 +32,30 @@ public class RacketDB {
         return res;
     }
 
+    public Racket vind(String naam){
+        if(naam == null || naam.trim().isEmpty()) throw new IllegalArgumentException();
+        for(Racket racket : rackets){
+            if(racket.getNaam().equals(naam)){
+                return racket;
+            }
+        }
+        return null;
+    }
+
     public String getMinstAantal() {
         Racket res = rackets.get(0);
         for (int i = 0; i < rackets.size() - 1; i++) {
-            if (res.getAantal() < rackets.get(i + 1).getAantal()) {
+            if ((res.getAantal()) > (rackets.get(i + 1)).getAantal()) {
                 res = rackets.get(i + 1);
             }
         }
         return res.getNaam();
+    }
+
+    public void voegToe(Racket racket){
+        if(racket == null) throw new IllegalArgumentException();
+        if(vind(racket.getNaam()) != null) throw new IllegalArgumentException("Je mag maar één maal een merk toevoegen");
+        rackets.add(racket);
     }
 
 
