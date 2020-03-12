@@ -16,12 +16,7 @@ public class Servlet extends HttpServlet {
 
     private RacketDB racketLijst = new RacketDB();
 
-    public Servlet() {
-        super();
-    }
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
-        String destination = "voegToe.jsp";
 
         String merk = request.getParameter("merk");
         String aantalFromParameter = request.getParameter("aantal");
@@ -31,27 +26,25 @@ public class Servlet extends HttpServlet {
         String prijsFromParameter = request.getParameter("prijs");
         double prijs = Double.parseDouble(prijsFromParameter);
 
-        if (merk != null && aantal <= 0 && bespanning <= 0 && prijs <= 0.0) {
+
             Racket racket = new Racket(merk, aantal, bespanning, prijs);
             racketLijst.voegToe(racket);
             request.setAttribute("racket", racket);
             request.setAttribute("minst", racketLijst.getMinstAantal());
             request.setAttribute("lijst", racketLijst.getList());
-            destination = "overzicht.jsp";
-        }
 
-        RequestDispatcher view = request.getRequestDispatcher(destination);
+
+
+        RequestDispatcher view = request.getRequestDispatcher("overzicht.jsp");
         view.forward(request, response);
 
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, java.io.IOException {
-        String destination = "overzicht.jsp";
-
         request.setAttribute("minst", racketLijst.getMinstAantal());
         request.setAttribute("lijst", racketLijst.getList());
 
-        RequestDispatcher view = request.getRequestDispatcher(destination);
+        RequestDispatcher view = request.getRequestDispatcher("overzicht.jsp");
         view.forward(request, response);
     }
 
