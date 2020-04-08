@@ -14,13 +14,15 @@
 </head>
 <body>
 <header>
+
     <a href="index.jsp"> <img src="img/Logores.png" alt="BC Tervuren - logo"></a>
     <h1>BC Tervuren</h1>
     <nav>
         <ul>
-            <li><a href="index.jsp">Home</a></li>
+            <li><a href="Servlet?command=home">Home</a></li>
             <li><a href="voegToe.jsp">Bestel</a></li>
-            <li><a href="Servlet">Overzicht</a></li>
+            <li><a href="Servlet?command=overzicht">Overzicht</a></li>
+            <li><a href="zoek.jsp">Zoek</a></li>
         </ul>
     </nav>
 </header>
@@ -52,6 +54,7 @@
             </td>
             <td><%=r.getAantalKiloBespanning()%>
             </td>
+            <td><a href="Servlet?command=delete&merk=<%=r.getNaam()%>">Verwijder</a></td>
         </tr>
         <%
                 }

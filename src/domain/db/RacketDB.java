@@ -58,5 +58,9 @@ public class RacketDB {
         rackets.add(racket);
     }
 
+    public  ArrayList<Racket> getAlle(){
+        return rackets;
+    }
+
 
 }

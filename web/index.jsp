@@ -16,9 +16,10 @@
     <h1>BC Tervuren</h1>
     <nav>
         <ul>
-            <li><a href="index.jsp">Home</a></li>
+            <li><a href="Servlet?command=home">Home</a></li>
             <li><a href="voegToe.jsp">Bestel</a></li>
-            <li><a href="Servlet">Overzicht</a></li>
+            <li><a href="Servlet?command=overzicht">Overzicht</a></li>
+            <li><a href="zoek.jsp">Zoek</a></li>
         </ul>
     </nav>
 </header>

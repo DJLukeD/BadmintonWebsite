@@ -52,5 +52,12 @@ public class Racket {
         return this.prijs * this.aantal;
     }
 
+    public String toString(){
+        return "\nNaam: " + naam +
+                "\nAantal:" + aantal +
+                "\nAantal kilo bespanning:" + aantalKiloBespanning +
+                "\nPrijs: €" + prijs;
+    }
+
 
 }
